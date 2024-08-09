@@ -11,7 +11,7 @@
 }
 
 .navBarSection {
-    position: relative; /* Ensure this has proper position */
+    position: relative;
 }
 
 .header {
@@ -40,7 +40,7 @@
 }
 
 .navBar {
-    display: flex; /* Ensure the parent container is flex */
+    display: flex;
     align-items: center;
 }
 
@@ -64,15 +64,29 @@
     display: flex;
     gap: 10px;
 }
-.closeNavbar{
+
+.closeNavbar {
     display: none;
 }
-.toggleNavbar{
-    display: none; /* Hide by default */
+
+.toggleNavbar {
+    display: none;
 }
 
 /* Mobile view styles */
 @media screen and (max-width: 768px) {
+
+    .toggleNavbar {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        color: var(--whiteColor);
+    }
+
+    .toggleNavbar:hover {
+        color: var(--PrimaryColor); 
+    }
+
     .navBar {
         background: var(--greyBg);
         position: absolute;
@@ -80,7 +94,7 @@
         padding: 1rem;
         width: 100%;
         top: 0;
-        left: -500%; /* Initially hide the navbar off-screen */
+        left: -500%; /* Initially hidden */
         box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
         transition: 0.5s ease;
         z-index: 1000;
@@ -98,13 +112,14 @@
     }
 
     .navLink {
+        text-decoration: none;
         color: var(--textColor);
-        font-size: 1.5rem; /* Font size correction */
+        font-size: 1.5rem;
         font-weight: 600;
     }
 
     .navLink:hover {
-        color: var(--PrimaryColor);
+        color: var(--PrimaryColor); /* Hover effect on links */
     }
 
     .headerBtns {
@@ -122,6 +137,7 @@
 
     .loginBtn a {
         color: var(--PrimaryColor);
+        text-decoration: none;
     }
 
     .loginBtn a:hover {
@@ -141,14 +157,10 @@
         color: var(--HoverColor);
     }
 
-    .toggleNavbar {
-        display: block; /* Show the toggle button in mobile view */
-        cursor: pointer;
-        font-size: 24px; /* Adjust the size if necessary */
-    }
-
     .activeNavbar {
-        display: block; /* Show the navbar when active */
-        left: 0; /* Bring the navbar into view */
+        display: block;
+        left: 0; /* Show the navbar when active */
     }
 }
+
+
