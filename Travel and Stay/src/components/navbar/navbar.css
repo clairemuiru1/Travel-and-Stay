@@ -1,0 +1,154 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 10%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColrDean: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: hsl(190, 190, 190);
+    --iputColor: hsl(330, 12%, 97%);
+}
+
+.navBarSection {
+    position: relative; /* Ensure this has proper position */
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.logoDiv .logo {
+    color: var(--whiteColor);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoDiv .logo .icon {
+    color: var(--PrimaryColor);
+    font-size: 25px;
+}
+
+.navBar {
+    display: flex; /* Ensure the parent container is flex */
+    align-items: center;
+}
+
+.navlists {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navItem {
+    margin-right: 20px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.headerBtns {
+    display: flex;
+    gap: 10px;
+}
+.closeNavbar{
+    display: none;
+}
+.toggleNavbar{
+    display: none; /* Hide by default */
+}
+
+/* Mobile view styles */
+@media screen and (max-width: 768px) {
+    .navBar {
+        background: var(--greyBg);
+        position: absolute;
+        height: max-content;
+        padding: 1rem;
+        width: 100%;
+        top: 0;
+        left: -500%; /* Initially hide the navbar off-screen */
+        box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+        transition: 0.5s ease;
+        z-index: 1000;
+    }
+
+    .navlists {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    .navItem {
+        padding: 1rem 0;
+    }
+
+    .navLink {
+        color: var(--textColor);
+        font-size: 1.5rem; /* Font size correction */
+        font-weight: 600;
+    }
+
+    .navLink:hover {
+        color: var(--PrimaryColor);
+    }
+
+    .headerBtns {
+        flex-direction: column;
+    }
+
+    .btn {
+        margin-top: 1rem;
+    }
+
+    .loginBtn {
+        background: none;
+        border: 3px solid var(--PrimaryColor);
+    }
+
+    .loginBtn a {
+        color: var(--PrimaryColor);
+    }
+
+    .loginBtn a:hover {
+        background: var(--HoverColor);
+        color: var(--whiteColor);
+    }
+
+    .closeNavbar {
+        position: absolute;
+        display: block;
+        top: 1rem;
+        right: 1.5rem;
+        color: var(--PrimaryColor);
+    }
+
+    .closeNavbar:hover .icon {
+        color: var(--HoverColor);
+    }
+
+    .toggleNavbar {
+        display: block; /* Show the toggle button in mobile view */
+        cursor: pointer;
+        font-size: 24px; /* Adjust the size if necessary */
+    }
+
+    .activeNavbar {
+        display: block; /* Show the navbar when active */
+        left: 0; /* Bring the navbar into view */
+    }
+}
