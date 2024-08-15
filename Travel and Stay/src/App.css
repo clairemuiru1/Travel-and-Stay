@@ -44,11 +44,11 @@ li{
 }
 
 .flex{
-    font-display: flex;
+    display: flex;
     align-items: center;
 }
 .grid{
-    font-display: grid;
+    display: grid;
     align-items: center;
 }
 .btn{
@@ -92,3 +92,43 @@ img, video{
 input{
     font-size: 100%;
 }
+/* Base styles */
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+/* @media screen and (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .secIntro .secTitle {
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .secIntro p {
+        font-size: 12px;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+    }
+} */
+

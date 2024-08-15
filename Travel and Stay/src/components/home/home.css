@@ -49,7 +49,7 @@
     text-align: center;  /* Center the text */
 }
 .btn {
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 0.5rem;
     background-color: var(--PrimaryColor);
     color: var(--whiteColor);
     cursor: pointer;
@@ -75,7 +75,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    bottom: -35%;
+    bottom: -15%; 
     transform: translate(-50%);
     left: 50%;
     box-shadow: 0.2px 8px 4px rgba(178, 178, 178, 0.45);
