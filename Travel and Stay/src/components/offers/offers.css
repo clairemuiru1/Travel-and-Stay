@@ -1,0 +1,147 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 10%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColrDean: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: hsl(190, 190, 190);
+    --iputColor: hsl(330, 12%, 97%);
+    --boxShadow: 0.2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+.secTitle h2 {
+    margin-bottom: 1rem; /* Increase this value to add more space */
+}
+
+.secTitle p {
+    margin-top: 1rem; 
+    margin-bottom: -20rem;/* Increase this value to add more space */
+}
+
+.offer {
+    .secContainer {
+        .mainContent {
+            gap: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
+        .singleOffer {
+            border-radius: 1rem;
+            overflow: hidden;
+            padding: .5rem;
+            box-shadow: var(--boxShadow);
+
+            .icon {
+                font-size: 35px;
+                color: var(--textColor);
+            }
+
+            small {
+                font-weight: 500;
+                color: var(--textColor);
+            }
+
+            .destImage {
+                position: relative;
+                height: 200px;
+                width: 100%;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .discount {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    padding: 5px 10px;
+                    background: var(--PrimaryColor);
+                    color: var(--whiteColor);
+                    border-radius: 3rem;
+                    font-size: 10px;
+                    font-weight: 500;
+                }
+            }
+
+            .offerBody {
+                padding: 1rem;
+
+                .price {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                h4 {
+                    color: var(--blackColor);
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                }
+
+                .status {
+                    padding: 5px 10px;
+                    color: var(--HoverColor);
+                    background: var(--greyBg);
+                    font-size: 10px;
+                    font-weight: 600;
+                    border-radius: 3rem;
+                }
+
+                .amenities {
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    padding: 1rem 0;
+                    gap: .5rem;
+                }
+
+                .singleAmenities {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    background: var(--greyBg);
+                    
+                }
+
+                .location {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    padding: 1rem 0;
+                }
+
+                .btn {
+                    margin-top: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    padding: .6rem;
+                    background: var(--PrimaryColor);
+                    color: var(--whiteColor);
+                    font-weight: 600;
+                    gap: .5rem;
+
+                    .icon {
+                        color: var(--whiteColor);
+                        font-size: 35px;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-7px);
+                    transition: transform 0.3s ease;
+                }
+            }
+        }
+    }
+}

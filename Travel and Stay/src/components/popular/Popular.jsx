@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './popular.css';
-import { FaArrowLeftLong, FaArrowRight, FaLocationDot } from "react-icons/fa6";
+import { SiGoogleearth } from 'react-icons/si';
+import { FaArrowLeftLong, FaArrowRight, } from "react-icons/fa6";
 
 const data = [
   {
@@ -114,8 +115,10 @@ function Popular() {
     <section className='popular section container'>
       <div className="secHeader flex">
         <div className="textDiv">
-          <h2 className="secTitle">Popular destination</h2>
+          <div className="secTitle">
+          <h2>Popular destination</h2>
           <p>From historical cities to natural spectaculars, come see the best of the world!</p>
+          </div>
         </div>
         <div className="iconsDiv flex">
           <FaArrowLeftLong className='icon leftIcon' onClick={prevSlide} />
@@ -138,7 +141,7 @@ function Popular() {
               <div className="destText flex">
                 <h6>{item.name}</h6>
                 <span className="flex">
-                  <FaLocationDot className='icon' />
+                  <SiGoogleearth  className='icon' />
                   Habibi
                 </span>
               </div>
