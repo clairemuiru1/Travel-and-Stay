@@ -45,11 +45,9 @@ function Offers() {
             <p>From historical cities to natural spectaculars, come see the best of the world!</p>
           </div>
         </div>
-        <div iconsDiv flex>
         <div className="iconsDiv flex">
           <FaArrowLeftLong className='icon leftIcon' onClick={prevSlide} />
           <FaArrowRight className='icon' onClick={nextSlide} />
-        </div>
         </div>
         <div className="carousel">
           <div className="mainContent">

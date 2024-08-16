@@ -1,0 +1,108 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 10%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColrDean: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: hsl(190, 190, 190);
+    --iputColor: hsl(330, 12%, 97%);
+    --boxShadow: 0.2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+
+p {
+    color: var(--textColor);
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: .5rem;
+}
+
+h3 {
+    font-weight: 700;
+    color: var(--blackColor);
+    padding: .5rem;
+}
+
+.about {
+    .secContainer {
+        .title {
+            color: var(--blackColor);
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .mainContent {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 1.5rem;
+            justify-items: center;
+
+            .singleItem {
+                text-align: center;
+
+                img {
+                    background: rgba(247,144,54,0.265);
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    padding: 1rem;
+                    object-fit: cover;
+                }
+
+                h3 {
+                    margin-top: 1rem;
+                }
+
+                p {
+                    font-size: 14px;
+                    color: var(--textColor);
+                }
+            }
+        }
+
+        .videoCard{
+            margin-top: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.73), rgba(0,0,0,0.609)),
+            url('https://media.istockphoto.com/id/1477997501/photo/airport-waiting-area-with-luggages-empty-seats-and-blurred-background.jpg?s=612x612&w=0&k=20&c=GWfe63JrrmjpWiFOYl2sH7RQjxRH3oaTDAe18C9Liqo=');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            .cardcontent{
+                gap: 2rem;
+                padding: 2rem 1rem;
+
+                .cardText{
+                    h2{
+                        color: var(--whiteColor);
+                        font-weight: 600;
+                        padding-bottom: 1rem;
+                    }
+                    p{
+                        color: var(--whiteColor);
+                        opacity: .7;
+                        font-size: 12px;
+                        font-weight: 400;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+            .cardVideo{
+              border: 2px solid var(--whiteColor);
+              height: 200px;
+              width: 100%;
+              border-radius: 10px; 
+              overflow: hidden;
+
+              video{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+        }
+    }
+}
