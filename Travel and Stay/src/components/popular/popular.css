@@ -165,7 +165,7 @@ p {
     position: absolute;
     background: var(--PrimaryColor);
     top: 50%;
-    right: -70%; /* Adjust this value if needed */
+    right: -65%; /* Adjust this value if needed */
     height: 5px;
     width: 45px;
     border-radius: 1rem;
