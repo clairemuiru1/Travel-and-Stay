@@ -8,6 +8,7 @@
     --greyBg: hsl(0, 0%, 96%);
     --greyText: hsl(190, 190, 190);
     --iputColor: hsl(330, 12%, 97%);
+    --boxShadow: 0.2px 8px 2px rgba(178, 178, 178, 0.334);
 }
 
 .navBarSection {
@@ -37,6 +38,7 @@
 .logoDiv .logo .icon {
     color: var(--PrimaryColor);
     font-size: 35px;
+    margin-right: 10px;
 }
 
 .navBar {
@@ -71,6 +73,10 @@
 
 .toggleNavbar {
     display: none;
+}
+.activeHeader{
+    background: var(--textColor);
+    box-shadow: var(--boxShadow) ;
 }
 
 /* Mobile view styles */
